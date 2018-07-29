@@ -14,35 +14,28 @@
                 return -1;
             }
 
-            var index = 0;
-            while (haystack.Length > 1)
+            var lowIndex = 0;
+            var highIndex = haystack.Length - 1;
+            
+            while (lowIndex <= highIndex)
             {
-                var splittedHaystack = SplitHaystack(haystack);
-
-                var leftHaystack = splittedHaystack.left;
-                var rightHaystack = splittedHaystack.right;
-
-                if (needle >= rightHaystack[0])
+                var midIndex = (lowIndex + highIndex) / 2;
+                if (needle < haystack[midIndex])
                 {
-                    haystack = rightHaystack;
-                    index += leftHaystack.Length;
-                }
-                else if (needle <= leftHaystack[leftHaystack.Length - 1])
+                    highIndex = midIndex - 1;
+                } 
+                else if (needle > haystack[midIndex])
                 {
-                    haystack = leftHaystack;
+                    lowIndex = midIndex + 1;
                 }
                 else
                 {
-                    return -1;
+                    return midIndex;
                 }
             }
-            return index;
+            return -1;
         }
 
-        private static (int[] left, int[] right) SplitHaystack(int[] haystack)
-        {
-            var half = haystack.Length / 2;
-            return (left: haystack.Take(half).ToArray(), right: haystack.Skip(half).ToArray());
-        }
+
     }
 }
