@@ -34,6 +34,16 @@
             Assert.That(result, Is.EqualTo(expectedResult), "Binary search fail");
         }
 
+        [Test, TestCaseSource(nameof(TestCases))]
+        public void Given_Array_When_BinarySearchRecurrentWithArrayChop_Then_Got_Result(int expectedResult, int needle,
+            int[] haystack)
+        {
+            var binarySearch = new BinarySearchRecurrentWithArrayChop();
+            var result = binarySearch.Search(needle, haystack);
+
+            Assert.That(result, Is.EqualTo(expectedResult), "Binary search fail");
+        }
+
         private static object[] TestCases =
         {
             new object[] {-1, 3, new int[0]},
