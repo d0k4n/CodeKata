@@ -1,6 +1,6 @@
-﻿namespace BinarySearchTest
+﻿namespace LibraryTest.BinarySearchTest
 {
-    using BinarySearch;
+    using Library.BinarySearch;
     using NUnit.Framework;
 
     [TestFixture]

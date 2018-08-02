@@ -1,4 +1,4 @@
-﻿namespace BinarySearch
+﻿namespace Library.BinarySearch
 {
     using System.Linq;
 

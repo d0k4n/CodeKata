@@ -1,4 +1,4 @@
-﻿namespace BinarySearch
+﻿namespace Library.BinarySearch
 {
     public interface IBinarySearch
     {

@@ -1,7 +1,5 @@
-﻿namespace BinarySearch
+﻿namespace Library.BinarySearch
 {
-    using System.Linq;
-
     public class BinarySearchRecurrent : IBinarySearch
     {
         public int Search(int needle, int[] haystack)

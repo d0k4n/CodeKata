@@ -1,6 +1,5 @@
-﻿namespace BinarySearch
+﻿namespace Library.BinarySearch
 {
-    using System.Linq;
 
     public class BinarySearch : IBinarySearch
     {
